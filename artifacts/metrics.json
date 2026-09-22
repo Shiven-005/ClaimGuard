@@ -1,0 +1,99 @@
+{
+  "overall_test_metrics": {
+    "pr_auc": 0.9702,
+    "roc_auc": 0.9861,
+    "recall_at_90_precision": 0.9551,
+    "precision_at_top_5_percent": 0.9905,
+    "estimated_money_saved": 6264419.16,
+    "review_threshold": 0.1,
+    "escalate_threshold": 0.75
+  },
+  "tag_metrics": {
+    "per_tag": {
+      "DUPLICATE_CLAIM": {
+        "precision": 0.95,
+        "recall": 0.2923,
+        "f1": 0.4471
+      },
+      "INFLATED_AMOUNT": {
+        "precision": 0.2421,
+        "recall": 1.0,
+        "f1": 0.3899
+      },
+      "SUSPICIOUS_TIMING": {
+        "precision": 0.7439,
+        "recall": 0.9839,
+        "f1": 0.8472
+      },
+      "PROVIDER_ANOMALY": {
+        "precision": 0.9872,
+        "recall": 0.9914,
+        "f1": 0.9893
+      },
+      "NARRATIVE_INCONSISTENCY": {
+        "precision": 0.1509,
+        "recall": 0.6782,
+        "f1": 0.2469
+      },
+      "RING_SUSPECT": {
+        "precision": 1.0,
+        "recall": 0.5934,
+        "f1": 0.7448
+      }
+    },
+    "macro_f1": 0.6109,
+    "micro_f1": 0.5846
+  },
+  "baseline_logistic_regression": {
+    "roc_auc": 0.7814,
+    "pr_auc": 0.6257
+  },
+  "ablation_study": {
+    "Tabular Only": {
+      "roc_auc": 0.8934,
+      "pr_auc": 0.7912
+    },
+    "Tabular + Text": {
+      "roc_auc": 0.9246,
+      "pr_auc": 0.8644
+    },
+    "Tabular + Graph": {
+      "roc_auc": 0.956,
+      "pr_auc": 0.9029
+    },
+    "Tabular + Anomaly": {
+      "roc_auc": 0.8924,
+      "pr_auc": 0.7901
+    },
+    "Full Model": {
+      "roc_auc": 0.9861,
+      "pr_auc": 0.9702
+    }
+  },
+  "novel_pattern_test": {
+    "sample_count": 54,
+    "roc_auc": 1.0,
+    "recall": 1.0,
+    "precision": 1.0
+  },
+  "fairness_check": {
+    "flag_rate_by_region": {
+      "Central": 0.0738,
+      "East": 0.0765,
+      "North": 0.0763,
+      "South": 0.0724,
+      "West": 0.0646
+    },
+    "flag_rate_by_age_group": {
+      "18-25": 0.0784,
+      "26-40": 0.075,
+      "41-60": 0.0683,
+      "60+": 0.0698
+    }
+  },
+  "robustness_test": {
+    "original_recall": 0.9551,
+    "amount_split_50pct_recall": 0.7957,
+    "recall_drop": 0.1595
+  }
+}
