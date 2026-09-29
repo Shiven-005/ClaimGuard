@@ -14,3 +14,4 @@ pytest==8.2.2
 httpx==0.27.0
 ruff==0.4.8
 joblib==1.4.2
+-e .
